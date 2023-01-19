@@ -1,0 +1,4 @@
+Para combinarmos os navegadores Stack e Tab, separamos ambos em componentes diferentes. A partir daí temos duas possibilidades:
+1 - Se quisermos que o rodapé do Tab Navigator apareça sempre, colocamos o componente do Stack navigator como rota dentro do Tab.
+
+2 -Se quisermos que o rodapé do Tab Navigator se esconda conforme navegamos com o Stack, colocamos o componente do Tab navigator como rota dentro do Stack.

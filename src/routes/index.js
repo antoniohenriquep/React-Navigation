@@ -1,9 +1,8 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import About from '../Pages/About';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import StackRoutes from './stackRoutes';
+import DrawerRoutes from './drawerRoutes';
 
 const Tab = createBottomTabNavigator()
 
@@ -23,7 +22,7 @@ export default function Routes() {
     }}>
         <Tab.Screen
         name = "Home"
-        component={StackRoutes}/>
+        component={DrawerRoutes}/>
         
         <Tab.Screen
         name = "About"
