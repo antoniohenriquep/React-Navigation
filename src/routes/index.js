@@ -1,9 +1,11 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Routes from './src/routes';
+import About from '../Pages/About';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import StackRoutes from './stackRoutes';
 
-const Stack = createNativeStackNavigator()
+const Tab = createBottomTabNavigator()
 
 /* 
   Os componentes de tipos de navegação devem estar dentro do NavigationContainer. Seguindo a seguinte estrutura: NavigationContainer > Xnavigator.Navigator > Xnavigator.Screen
@@ -13,11 +15,20 @@ const Stack = createNativeStackNavigator()
   - Drawer: Navegação em gaveta, que sai das laterais da página
 */
 
-export default function App() {
+export default function Routes() {
  return (
-   <NavigationContainer>
-    <Routes/>
-   </NavigationContainer>
+    <Tab.Navigator
+    screenOptions={{
+        headerShown:false
+    }}>
+        <Tab.Screen
+        name = "Home"
+        component={StackRoutes}/>
+        
+        <Tab.Screen
+        name = "About"
+        component={About}/>
+    </Tab.Navigator>
   );
 }
 
